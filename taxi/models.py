@@ -31,7 +31,6 @@ class Driver(AbstractUser):
     def clean(self):
         if (
                 len(self.license_number) != 8
-                or not self.license_number[:3].isupper()
                 or not self.license_number[:3].isalpha()
                 or not self.license_number[-5:].isdigit()
         ):
